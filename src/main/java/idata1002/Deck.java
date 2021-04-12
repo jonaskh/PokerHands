@@ -2,6 +2,7 @@ package idata1002;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.text.Text;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -10,6 +11,7 @@ import java.util.stream.Collectors;
 public class Deck {
     ArrayList<Card> deck = new ArrayList<>();
     ArrayList<Card> myCards = new ArrayList<>();
+    boolean flush;
 
     String[] face = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
     private final char[] suit = {'C', 'S', 'D', 'H'};
@@ -31,7 +33,10 @@ public class Deck {
         }
     }
 
-
+/*
+Pulls n ammount of cards from the deck randomly and adds them to a list. WIll then check if those cards
+is a flush using streams.
+ */
     public void pullCards(int n) {
         Random rand = new Random();
         myCards.clear();
@@ -54,13 +59,11 @@ public class Deck {
                 .get();
         //System.out.println("Largest number of same suit: " + largestNumberOfSameSuit);
         if (largestNumberOfSameSuit >= 5) {
-            System.out.println("YOU HAVE A FLUSH!");
+            boolean flush = true;
 
         }
         else {
-            System.out.println("You do not have a flush");
-
-
+            boolean flush = false;
         }
         System.out.println(myCards);
 

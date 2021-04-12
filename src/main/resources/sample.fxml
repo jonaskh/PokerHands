@@ -2,12 +2,14 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="idata1002.Controller">
    <children>
       <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0">
          <children>
             <ListView fx:id="cardListView" prefHeight="200.0" prefWidth="200.0" />
+            <Text fx:id="text" strokeType="OUTSIDE" strokeWidth="0.0" text="FLush checker" />
          </children>
       </VBox>
       <Button mnemonicParsing="false" onAction="#buttonPressed" text="Pull Cards" />
